@@ -33,6 +33,7 @@ df$Runda[df$Distance > 18100 & df$Distance < 18600] <- "Golvsta_Haberga"
 df$Runda[df$Distance > 19700 & df$Distance < 20000 & substr(df$DateTime,1,4) == "2022"] <- "Special"
 df$Runda[df$Distance > 36000 & df$Distance < 36700 & substr(df$DateTime,1,4) == "2022"] <- "Voxome_Löddby"
 df$Runda[df$Distance > 50200 & df$Distance < 51250 & substr(df$DateTime,1,4) == "2022"] <- "Gimo-Fornbro"
+df$Runda[df$Distance > 47200 & df$Distance < 47300 & substr(df$DateTime,1,4) == "2022"] <- "Lyan-Bladåker"
 df$Runda[120] <- "Special"
 df$Yday <- yday(df$DateTime)
 df$CY[substr(df$DateTime,1,4) == Current_Year] <- 1  

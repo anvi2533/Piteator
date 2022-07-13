@@ -16,7 +16,7 @@ datalist = list()
 date_time <- c()
 training_date <- c()
 
-if(nr_files == check){
+if(nr_files != check){
   
   #create distance vector
   source("fn_distance_vector.R")

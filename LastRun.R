@@ -1,7 +1,7 @@
 #Last run
 
 file <- max(files)
-path = paste(sep="","C:/repos/GPS_2022/GPX/",file)
+path = paste(getwd(),"/GPX/",sep = "",file)
 
 p = read_sf(path, layer = "track_points")
 time_coords <- data.frame(p$time,st_coordinates(p))
