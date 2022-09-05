@@ -69,20 +69,20 @@ saveRDS(speed_list,"Piteator/km_list.RDS")
 #====
 w_left <- as.numeric((as.Date("2022-12-31") - Sys.Date())/7)
 km_left <- m_left*10
-goal <- paste("FÃ¶r att uppnÃ¥ mÃ¥let behÃ¶ver jag cykla", round(km_left/w_left,2), "km per vecka")
+goal <- paste("För att uppnå målet behöver jag cykla", round(km_left/w_left,2), "km per vecka")
 saveRDS(goal,"Piteator/goal.RDS")
 readRDS("Piteator/goal.RDS")
 
 #Title
 #=====
-title <- "PiteÃ¥ tur och retur 2022"
+title <- "Piteå tur och retur 2022"
 saveRDS(title,"Piteator/title.RDS")
 readRDS("Piteator/title.RDS")
 
 texts <- c()
-texts$title <- "Pite? tur och retur 2022"
-texts$trend_dev <- paste(dev,"km fr?n ideallinjen")
-texts$goal_w <- paste("F?r att uppn? mÃ¥let beh?ver jag cykla", round(km_left/w_left,2), "km per vecka")
+texts$title <- "Piteå tur och retur 2022"
+texts$trend_dev <- paste(dev,"km från ideallinjen")
+texts$goal_w <- paste("För att uppnå målet behöver jag cykla", round(km_left/w_left,2), "km per vecka")
 saveRDS(texts,"Piteator/texts.RDS")
 readRDS("Piteator/texts.RDS")
 

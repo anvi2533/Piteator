@@ -20,16 +20,19 @@ latitude <- xy_c[closest_value,2]
 #Celebrations
 #============
 #Get coordinates
-closest_value <- which.min(abs(cum_dist - 750000))
-celebration <- c(10648)
+closest_value <- which.min(abs(cum_dist - 1500000))
+celebration <- c(45238)
 longitude_c <- xy_c[celebration,1]
 latitude_c <- xy_c[celebration,2]
-celebration <- c(23729)
+celebration <- c(56199)
 longitude_c2 <- xy_c[celebration,1]
 latitude_c2 <- xy_c[celebration,2]
-celebration <- c(35082)
+celebration <- c(69534)
 longitude_c3 <- xy_c[celebration,1]
 latitude_c3 <- xy_c[celebration,2]
+celebration <- c(73872)
+longitude_c4 <- xy_c[celebration,1]
+latitude_c4 <- xy_c[celebration,2]
 
 #Bike icon
 
@@ -40,21 +43,27 @@ Bike <- makeIcon(
 )
 
 #Celebration icon
-CelebrationIcon_250 <- makeIcon(
+CelebrationIcon_1000 <- makeIcon(
   #iconUrl = "https://leafletjs.com/SlavaUkraini/examples/custom-icons/leaf-green.png",
-  iconUrl = 'Markers/Celebration_250.png',
+  iconUrl = 'Markers/Celebration_1000.png',
   iconWidth = 38, iconHeight = 38,
   iconAnchorX = 19, iconAnchorY = 38
 )
 
-CelebrationIcon_500 <- makeIcon(
-  iconUrl = 'Markers/Celebration_500.png',
+CelebrationIcon_1250 <- makeIcon(
+  iconUrl = 'Markers/Celebration_1250.png',
   iconWidth = 38, iconHeight = 38,
   iconAnchorX = 19, iconAnchorY = 38
 )
 
-CelebrationIcon_750 <- makeIcon(
-  iconUrl = 'Markers/Celebration_750.png',
+CelebrationIcon_1500 <- makeIcon(
+  iconUrl = 'Markers/Celebration_1500.png',
+  iconWidth = 38, iconHeight = 38,
+  iconAnchorX = 19, iconAnchorY = 38
+)
+
+CelebrationIcon_goal <- makeIcon(
+  iconUrl = 'Markers/Celebration_goal.png',
   iconWidth = 38, iconHeight = 38,
   iconAnchorX = 19, iconAnchorY = 38
 )
@@ -73,8 +82,8 @@ n <- leaflet() %>%
                                            "font-size" = "12px",
                                            "border-color" = "rgba(0,0,0,0.5)"
                                          ))) %>%
-  addMarkers(lng = longitude_c, lat = latitude_c,icon = CelebrationIcon_250,
-             label = "Pianostämning",
+  addMarkers(lng = longitude_c, lat = latitude_c,icon = CelebrationIcon_1000,
+             label = "",
              labelOptions = labelOptions(noHide = F, textOnly = TRUE, direction = "bottom",
                                          style = list(
                                            #"color" = "red",
@@ -84,7 +93,18 @@ n <- leaflet() %>%
                                            "font-size" = "15px",
                                            "border-color" = "rgba(0,0,0,0.5)"
                                          ))) %>%
-  addMarkers(lng = longitude_c2, lat = latitude_c2,icon = CelebrationIcon_500,
+  addMarkers(lng = longitude_c2, lat = latitude_c2,icon = CelebrationIcon_1250,
+             label = "SPA",
+             labelOptions = labelOptions(noHide = T, textOnly = TRUE, direction = "bottom",
+                                         style = list(
+                                           #"color" = "red",
+                                           "font-family" = "serif",
+                                           "font-style" = "normal",
+                                           #"box-shadow" = "3px 3px rgba(0,0,0,0.25)",
+                                           "font-size" = "15px",
+                                           "border-color" = "rgba(0,0,0,0.5)"
+                                         ))) %>%
+  addMarkers(lng = longitude_c3, lat = latitude_c3,icon = CelebrationIcon_1500,
              #label = label_c,
              labelOptions = labelOptions(noHide = T, textOnly = TRUE, direction = "bottom",
                                          style = list(
@@ -95,7 +115,7 @@ n <- leaflet() %>%
                                            "font-size" = "15px",
                                            "border-color" = "rgba(0,0,0,0.5)"
                                          ))) %>%
-  addMarkers(lng = longitude_c3, lat = latitude_c3,icon = CelebrationIcon_750,
+  addMarkers(lng = longitude_c4, lat = latitude_c4,icon = CelebrationIcon_goal,
              #label = label_c,
              labelOptions = labelOptions(noHide = T, textOnly = TRUE, direction = "bottom",
                                          style = list(
